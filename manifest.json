@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Jarvis",
+  "version": "1.0",
+
+  "description": "Digital Assistant",
+
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content_scripts/bk.js"],
+      "css":["content_scripts/bk.css"]
+    }
+  ]
+}
