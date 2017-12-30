@@ -1,4 +1,4 @@
-#MyNameIsRohan {
+#SomethingUnique {
   background: blue;
   width:50px;
   height:50px;
@@ -9,6 +9,48 @@
 }
 
 #Asura {
-  width:100%;
-  display: hidden;
+  display:none;
+  background: red;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  position: fixed !important;
+  bottom: 50px !important;right: 50px !important;
+  border: 5px solid #add8e6;
+}
+
+.talk-bubble {
+  position: fixed !important;
+  bottom: 120px !important;right: 10px !important;
+  display: inline-block;
+  position: relative;
+	width: 200px;
+	height: auto;
+	background-color: lightyellow;
+}
+.border{
+  border: 8px solid #666;
+}
+
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
 }
