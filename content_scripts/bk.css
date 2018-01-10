@@ -19,10 +19,10 @@
   border: 5px solid #add8e6;
 }
 
-.talk-bubble {
+#talk-bubble {
+  display:none;
   position: fixed !important;
   bottom: 120px !important;right: 10px !important;
-  display: inline-block;
   position: relative;
 	width: 200px;
 	height: auto;
