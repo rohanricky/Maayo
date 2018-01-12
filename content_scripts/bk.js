@@ -1,4 +1,4 @@
-
+window.addEventListener('load',function(){
 var header = document.createElement("div");
 header.setAttribute("id","SomethingUnique")
 document.body.appendChild(header);
@@ -8,7 +8,7 @@ var textbox = document.createElement("div");
 textbox.setAttribute("id","talk-bubble");
 textbox.setAttribute("class","tri-right border btm-right-in");
 textbox.innerHTML='<div class="talktext">\
-  <input id="input" type="text" onkeypress="return onEnter(event);" />\
+  <input id="input" type="text" />\
 </div>';
 document.body.appendChild(textbox);
 
@@ -16,14 +16,23 @@ document.getElementById("SomethingUnique").addEventListener("click",function(){
     var display=document.getElementById('talk-bubble');
     display.style.display=='none' ? display.style.display='block' : display.style.display='none';
 });
-
+/*
 function onEnter(e){
-  if(e.keyCode == 13 || e.which == 13){
-    alert(document.getElementById("input").value);
-    return false;
+  if(e.key=="Enter"){
+    var x = document.getElementById("input").value;
+    alert(x);
   }
-  return true;
 }
+*/
+document.getElementById("input").addEventListener('keypress',(event)=>{
+  if(event.key=="Enter"){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST","http://192.168.43.167:7823/apiLu12k3Cat8V5FR10cOyQ",true)
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("open facebook");
+    alert("hi");
+  }
+},false);
 /*
 $("#SomethingUnique").click(function(){
   $("#talk-bubble").css("display")=='none'?$("#talk-bubble").css("display","block"):$("#talk-bubble").css("display","none");
@@ -33,3 +42,4 @@ $(document).click(function(){
   $("#talk-bubble").hide();
   });
 */
+});
